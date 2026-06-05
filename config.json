@@ -1,28 +1,8 @@
 [
   {
-    "name": "BBC",
-    "key": "bbc",
-    "rssUrl": "https://feeds.bbci.co.uk/news/world/rss.xml"
-  },
-  {
-    "name": "纽约时报国际",
-    "key": "nyt",
-    "rssUrl": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
-  },
-  {
-    "name": "卫报",
-    "key": "guardian",
-    "rssUrl": "https://www.theguardian.com/world/rss"
-  },
-  {
-    "name": "美国公共广播",
-    "key": "npr",
-    "rssUrl": "https://feeds.npr.org/1001/rss.xml"
-  },
-  {
-    "name": "华盛顿邮报",
-    "key": "washington",
-    "rssUrl": "https://feeds.washingtonpost.com/rss/world"
+    "name": "Google News",
+    "key": "google",
+    "rssUrl": "https://news.google.com/rss"
   }
   
 ]
