@@ -1,11 +1,17 @@
 [
   {
-    "name": "BBC 新闻",
+    "name": "BBC",
     "key": "bbc",
     "rssUrl": "https://feeds.bbci.co.uk/news/world/rss.xml"
   },
   {
-    "name": "CNN 新闻",
+    "name": "纽约时报国际",
+    "key": "nyt",
+    "rssUrl": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+  },
+  
+  {
+    "name": "CNN",
     "key": "cnn",
     "rssUrl": "http://rss.cnn.com/rss/edition.rss"
   }
