@@ -1,0 +1,32 @@
+name: Auto Update BBC News
+# 触发规则：①提交代码时自动运行 ②UTC每日8点（北京时间16点）定时爬取
+on:
+  push:
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1.拉取仓库全部代码
+      - uses: actions/checkout@v4
+      # 2.配置Node20环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # 3.安装项目依赖（rss-parser）
+      - name: Install dependencies
+        run: npm install
+      # 4.执行你的生成脚本（文件名是generate.js和你源码对应）
+      - name: Run generate script
+        run: node generate.js
+      # 5.把新生成的index.html自动提交、推送回main分支
+      - name: Commit updated html
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "actions@github.com"
+          git add index.html
+          git commit -m "Automatically update BBC news html" || echo "No content changes"
+          git push origin main
