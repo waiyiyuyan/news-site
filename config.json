@@ -21,5 +21,11 @@
     "name": "南华早报",
     "key": "scmp",
     "rssUrl": "https://www.scmp.com/rss/3/feed/"
+  },
+  
+  {
+    "name": "耶路撒冷邮报",
+    "key": "jpost",
+    "rssUrl": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx"
   }
 ]
