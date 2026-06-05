@@ -90,6 +90,18 @@
             color:#657786;
             line-height:1.5;
         }
+        /* 关键：限制small内部标签，解决内容自动换行拆分新闻条目 */
+        small p {
+            margin: 2px 0 !important;
+        }
+        small br {
+            display: none !important;
+        }
+        small img {
+            max-width: 90px !important;
+            height: auto;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -104,22 +116,13 @@
 			<div class="show news-wrap" data-key="google">
 				<ul>
 				<li>
-					<a href="https://news.google.com/rss/articles/CBMiY0FVX3lxTFBjQmJhSzN5bFdwQUNmQXUzSDZIbWc2Z3JDMFU4enN1cTlLMmUyaER1UEpWYXM2R3ZVOGlENDJRNEYzLVlaeVFiUEsyclpIb0NycnBzUmlwOV9aVElidTU0Y1V0MA?oc=5" target="_blank">Trump Administration Live Updates: Republicans Defeat First Attempt to Block President’s $1.8 Billion Payout Fund - The New York Times</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 11:09:00</div>
-					<small>Trump Administration Live Updates: Republicans Defeat First Attempt to Block President’s $1.8 Billion Payout Fund  The New York Times
+					<a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxOeEJ1ZHRtRlo3U3ZGR2NpejNncFJkb1pZR2dUY3FYRWk2ZG9ERm9VQlFHaGFLd2N1Z2VSX0wtNDFjRE1MNTVqTkVFWDBpQnk3Z24wYUdzcFhxR2VVM21QWURYZW9VMkNTZzVsT09mOHZGVUNFblJqaVlFWVpxNnp2bw?oc=5" target="_blank">Watch Live: Senate holds "vote-a-rama" on ICE funding, rejects Democrats' move to ban DOJ fund - CBS News</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 13:00:25</div>
+					<small>Watch Live: Senate holds "vote-a-rama" on ICE funding, rejects Democrats' move to ban DOJ fund  CBS News
 Republicans reject multiple efforts to kill Trump’s $1.8 billion ‘anti-weaponization’ fund  CNN
 Democrats force vote on Trump’s $1.8bn settlement fund in ‘vote-a-rama’  Al Jazeera
-Cassidy tries to drive stake in Trump’s anti-weaponization fund  The Hill
-Senate rejects an amendment barring Trump’s controversial payout fund  The Washington Post</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBQcFZFVjExbm1WVHl6a0V0Z2IwczQtbVFDQ2tiMTBsd1p1NkVuQS1aMW4xdjU2T1R4c29Qal9kcGc0X25qTnlZTEdSV2x3UGY3RHl3RHM5U0hHTUtlS1llRXkyQURjZjRkQkNtSmZVb1RJYzJWS3haRmpkcw?oc=5" target="_blank">Republicans' sweeping election overhaul fails in the Senate - NPR</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:19:56</div>
-					<small>Republicans' sweeping election overhaul fails in the Senate  NPR
-Four Senate Republicans again unite with Dems to block Trump's SAVE America Act  Fox News
-Senate rejects yet another GOP push to revive SAVE America Act  Democracy Docket
-US Senate votes down Trump administration's SAVE America Act  Anadolu Ajansı
-Defend democracy from the SAVE Act | Opinion  The Tennessean</small>
+Senate rejects an amendment barring Trump’s controversial payout fund  The Washington Post
+Republicans Defeat Move to Bar Trump’s Payout Fund  The New York Times</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1CaGFZYm0xV3hrdkJROE94NDRuWTlNRFRzUUxuZnZjWTVoaVNSZlhVMXpXUGZxeGtpaWpqZkpqSllLUDN1NVoxVU1lWE5wZFpORjNNWUpJMFpyQQ?oc=5" target="_blank">House Republicans break with Trump again to approve Ukraine aid - BBC</a>
@@ -128,7 +131,43 @@ Defend democracy from the SAVE Act | Opinion  The Tennessean</small>
 House approves Ukraine aid and Russian sanctions, defying Trump and GOP leaders  CNN
 In second break with Trump in a week, House passes bill to aid Ukraine  The Guardian
 US House backs Russia sanctions, Ukraine aid, in latest blow to Trump  Reuters
-House passes Ukraine security aid bill over objections of GOP leaders  The Washington Post</small>
+Ukraine aid package passes House, bucking GOP leaders and Trump  Politico</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBQcFZFVjExbm1WVHl6a0V0Z2IwczQtbVFDQ2tiMTBsd1p1NkVuQS1aMW4xdjU2T1R4c29Qal9kcGc0X25qTnlZTEdSV2x3UGY3RHl3RHM5U0hHTUtlS1llRXkyQURjZjRkQkNtSmZVb1RJYzJWS3haRmpkcw?oc=5" target="_blank">Republicans' sweeping election overhaul fails in the Senate - NPR</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:19:56</div>
+					<small>Republicans' sweeping election overhaul fails in the Senate  NPR
+Four Senate Republicans again unite with Dems to block Trump's SAVE America Act  Fox News
+Senate rejects yet another GOP push to revive SAVE America Act  Democracy Docket
+AFPI Denounces the U.S. Senate’s Failure to Protect Our Elections and Our Democracy  America First Policy Institute
+US Senate votes down Trump administration's SAVE America Act  Anadolu Ajansı</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPemJUNHpQTlZNc0JKelNwaldsZ3p3SG9VSmdQSTNldVZhTWlGdWg4RzVHZElKZUIzVWx0YkQ5U2tOTFZudEc4bE5oVmU1TUJDYnF5VUktb0g2ZXNLaGFoMEJrcHN0eUVoVTJ5dEY5WjB5aHhrdkp2N1l5T1dtX1NGR2I5aEVaOWZOSG44UUEwOVROdWpMeGFzZ0JRZXdEVTFBQ3JONXc3M0xDaU14ekN0QzdsWC05YmVwZUlFWElueEs1QQ?oc=5" target="_blank">ICE to stop reporting deaths of newly released detainees, internal memo says - The Washington Post</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 12:09:59</div>
+					<small>ICE to stop reporting deaths of newly released detainees, internal memo says  The Washington Post
+ICE will stop reporting deaths of newly released detainees  ABC News - Breaking News, Latest News and Videos
+Leaked Memo Reveals Eyebrow-Raising Change at ICE  The Daily Beast
+ICE Updates Reporting Policy Amid Rising Detainee Deaths  Yahoo
+Report: ICE to end reporting deaths of released detainees  Middle East Eye</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPRDFHM1FrT0VkQU1ZTmg4enc3MVlNdk5HUXN1bUJteXByMXdCcmM0WDIyc1Q3dWY4ZG52QTRrT0FnX1JHdVBVSVlqMXhaenhtSmVaT3JiNWhueFBiRGRURVl1MjIzclp2MmdXMW1COHVYVTAtajBycFpFZ0g0dGE5MzI5cHpzSUotVWFKUk5abjFNejluSWpSdmRB?oc=5" target="_blank">John Bolton reaches plea deal over mishandling classified documents - The Guardian</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/4 22:55:00</div>
+					<small>John Bolton reaches plea deal over mishandling classified documents  The Guardian
+John Bolton, Ex-Trump Adviser, Reaches Deal to Plead Guilty Over Classified Information  The New York Times
+Exclusive: John Bolton reaches plea deal over mishandling of sensitive national security information  CNN
+Former National Security Advisor John Bolton to plead guilty to retaining classified information: sources  Fox News
+Ex-Trump advisor John Bolton agrees to plead guilty to retaining classified information: MS NOW  CNBC</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOY0lZWkFZazVMQzk5NWVXQngyZ08temRzSktYTkhreGVXT2hhU1NfUGx0RnpWYVBnbllGblRwX1FHdnJkVWZpbTZ6N21JU0Zfd0JER2FwYm1rWHZHNzRNZnJLcHRMZXJ1Mm5wa2MxQWR4LTlZNndDQjRrekVEbFQ3WUczR0dMVnNUdjJWbVJR?oc=5" target="_blank">Here's how every California county voted for governor, per current tallies - SFGATE</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 02:23:50</div>
+					<small>Here's how every California county voted for governor, per current tallies  SFGATE
+What to Know About California’s Top Election Races  The New York Times
+What just happened in California?  vox.com
+Becerra and Bass surge in California as anti-establishment fever breaks  Politico
+California Democrats play it safe with Becerra, defying national trends  The Washington Post</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQTGNnQnZZaGRjZFhCX0xHQXZzT0JIcGJqRHMwUWpBV3kwWG9ESWFqY0UtUUp3OU9QT1E4aEtWTlc3elVtY1J1WFdMdUIwNnRuMGhrMVZLU0F4aksyb1E3MmVSbDNUbF9vbmw1Q1gzOVJpWTIycTVDcUJsTmJUeC1FUHYxdWRuWFRBSWt0U19Ucm5CYjVXbDRGOUlVWmhiUQ?oc=5" target="_blank">Democrats are furious after latest Platner revelations - Politico</a>
@@ -137,25 +176,7 @@ House passes Ukraine security aid bill over objections of GOP leaders  The Was
 Several Women Who Dated Graham Platner Recall ‘Unsettling’ Behavior  The New York Times
 ‘He hated women’: Explosive abuse, new Nazi tattoo allegations from exes rock Platner's campaign  Fox News
 Report details allegations of unsettling behavior toward women by Graham Platner  CNN
-Democrats navigate a new Graham Platner controversy in Maine’s battleground Senate race  NBC News</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOUWxFTDhGUGw4aTQ3ekpoQXJwZWkxeUpjaEhUVHJTelhQWjRsQ1BiNldnRjBUSks1dFExaGxxQjJfbFBGUjRRbl9uZjV0QjBwTGlNbi16R1FnUDBMcXhyNlFFNE1PU19hQzdsc2ZBZ1pzMlJYNFVRak5mSlJxVlczWlpfYUhsOXpkOEZsbE5QWV9SaWRoYVdfNUd0Ty1adzdpNkR2b0Y4YlZwbFk5aE1nckVUQS1HaS1lOUtlbQ?oc=5" target="_blank">John Bolton expected to plead guilty in classified-documents case - The Washington Post</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 08:01:53</div>
-					<small>John Bolton expected to plead guilty in classified-documents case  The Washington Post
-John Bolton, Ex-Trump Adviser, Reaches Deal to Plead Guilty Over Classified Information  The New York Times
-Exclusive: John Bolton reaches plea deal over mishandling of sensitive national security information  CNN
-Former National Security Advisor John Bolton to plead guilty to retaining classified information: sources  Fox News
-News Wrap: Former Trump adviser John Bolton to plead guilty over classified information  PBS</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE92V0RrWW4wQnotZ2txVWppd2NtM3lYNXBieXlPTHQtUGhDOWRkR0tzd2lkX09faGc2TzF1YkpubWlGOUtWZjNveGQ5WjNrODE3ejR0ajZ3OVh1TXBoWDZpOGVjZ3hGMDJWWi1PMXNMaV9QTzgxVHZWejZ1NHRtdw?oc=5" target="_blank">I wrote about George Santos. Then he made a violent threat and lied about it - NPR</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:39:40</div>
-					<small>I wrote about George Santos. Then he made a violent threat and lied about it  NPR
-U.S. Is Said to Be Investigating George Santos Over Kalshi Betting  The New York Times
-George Santos betting activity on Kalshi flagged to DOJ, sources say  NBC News
-George Santos reported to prosecutors over suspicious Kalshi trades, AP source says  AP News
-George Santos says lawyers are talking to DOJ amid reported probe - Live Updates  Politico</small>
+Knives Out for Morris Katz  New York Magazine</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQcGloWXpiLWdNUkstV3hkRlNINTJHa0hfVHdBaThiLWd4R09FVzVBc0pnd0FFNXMyN2xTdnVqOXljdUNPY0ktUW9oTk90UkRVLVp0bjByYXRZSnVyTXJFdDFZaUxfYzNFa3ZnVzUxM1ZCRkxWNFc2eVlXbGxXdk1vMDdsdjhfM3lTQTJ2aWdkVVlnODZW?oc=5" target="_blank">Judge dismisses murder charge against Arkansas sheriff nominee who killed daughter's alleged abuser - CBS News</a>
@@ -167,67 +188,58 @@ Murder charge dropped for Arkansas sheriff nominee who killed daughter’s alleg
 Murder charge against Aaron Spencer dismissed, court documents show  KATV</small>
 				</li>
 				<li>
-					<a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVEgtM00wMS01WlBHMjRaMGZGcmI5UXB2UnJKa1l2ZElLbWdmMDBiZHBvc2FEYkNQMmNqWG1tQWNPbW40aTQzMUg5TzhKYkdqcWVTUmdQRGQ1Q3NYaHMweG1lLV9LcE9NaW9OY00wb0IwRmdEMVJLQTQ1MTEtcDNYWE9kRkZHdlpqVVF4ZENYaGxrUHhkNjdHX215Q0szOUtRYWJpQmRGUmdCQQ?oc=5" target="_blank">California’s slow ballot count makes it a target for critics. It doesn’t mean elections are rigged - AP News</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 05:13:36</div>
-					<small>California’s slow ballot count makes it a target for critics. It doesn’t mean elections are rigged  AP News
-California Governor Primary Election 2026 Live Results  NBC News
-Becerra Advances in California’s $300 Million Governor Race  Bloomberg.com
-What just happened in California?  vox.com
-California Democrats play it safe with Becerra, defying national trends  The Washington Post</small>
+					<a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOcVFGTEpjMUZXaXBMbTRuV2VWdlZHTkFUVklyWWdxcExCal9lS2hELVZkbFlSMF80cnduSWtSVXd5NHltSXR5VUZPM0FiRDU2RnRZUGthX1RBVThRZlJ1Um5ja1BmTHRUUU11Vk1pTENDZGtZdTNnYlc0OGtBSzZNM0hEN2Jlb2F4dWlmRkZEYnVSbE1fSXZKem5EZmtzXzhfRjhZNTBSZmRQdkhQc2xTS1BudjJQTmxqNzd4RUNQN0JydVMwUk9GUlNGcTZnZw?oc=5" target="_blank">Live Updates: Karmelo Anthony murder trial in fatal stabbing of Austin Metcalf at Frisco ISD track meet - CBS News</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 06:30:00</div>
+					<small>Live Updates: Karmelo Anthony murder trial in fatal stabbing of Austin Metcalf at Frisco ISD track meet  CBS News
+Track meet stabbing trial day 3: 'I just knew Austin was gone' tearful coach testifies in Karmelo Anthony case | Live updates  WFAA
+Karmelo Anthony stabbing was a ‘sneak attack,’ prosecutors say  NewsNation
+Karmelo Anthony trial begins with no Black jurors in racially-charged case over track meet stabbing  Fox News
+Witnesses share heartbreaking efforts to save victim's life on Day 1 of Karmelo Anthony murder trial  NBC 5 Dallas-Fort Worth</small>
 				</li>
 				<li>
-					<a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUG5DVkxuelNkNVVYSlZMQmJWUUJEN01KRGpqU1BqSEhfSjJ1T2pOdk9UUmxQcFFRN0Rhd3JkbmJBYWhnaF9KQVBRSjRpZXY4allYeHJOR0puQmc1YXJSSlY5eWw0VWctd2tldGEzNHlNTmJTckVTbnhzcjVxeHR1eWRCSVNxbnVVQV9PMkFXV3YzODZFb25vTWFCMVpNRFFZcE5hcktNVVdJVVlweXRneVR6eGdhdFRuYk9hdEVuRGJFNkE?oc=5" target="_blank">Screwworm fly detected in Texas decades after cattle threat was largely eradicated in U.S. - PBS</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 02:50:49</div>
-					<small>Screwworm fly detected in Texas decades after cattle threat was largely eradicated in U.S.  PBS
-What to know about the New World screwworm fly and its reappearance in the US  AP News
-Screwworm Is Back In Texas Cattle—Is DOGE To Blame?  Forbes
-Current Status  aphis.usda.gov
-Flesh-eating New World screwworm found in Texas calf, USDA says  Yahoo</small>
+					<a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPWTUxc0NzTUprTjhCeVJkSmgwZ3RwVHFSeW8taXU3RU94WWRfMHVrYTJyOW5mcHo5R0JFRHItR0x1UHVJeVN4c2lqUVhjdWhmVl9rc29kNG4xb3FNTmE0akV6TWU0V3ZQemxMdGpjcUctUUJocVFOVGxRcGxad2V1OGJoX1lVU0FsLVhfNFlPTVNGSjNOem5CX3FmZEF0dlZaSHh3Ukh3OUFaQlVBSFdKUXpsQWR3Mnk2RFJBV0xvSUtfd3ZqRHhzaUtDbGE1VFYzd1hfN0tEZDZnbVFsbzdrTUxjcm4zeHdvZW1qTjRn?oc=5" target="_blank">Trump announces new coal export terminal in Oakland - Los Angeles Times</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:03:00</div>
+					<small>Trump announces new coal export terminal in Oakland  Los Angeles Times
+Donald Trump unveils $700m 'beautiful, clean coal' investment  BBC
+Trump Approves $700 Million in Bid to Revive US Coal Industry  Bloomberg.com
+Trump administration selects proposed coal project for $89 million grant in Susitna River watershed  Anchorage Daily News
+Trump directs hundreds of millions of dollars to support coal using emergency powers  Reuters</small>
 				</li>
 				<li>
-					<a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOR0RabWQzazZZNXNYWTlUZVhxRWt2M05TSlQ4S3QtYkQ0elo1NjZoMktSSjBHZ2pmT05Bb3pqZjlLeVlENG9HRklpcUpfYlk0dEFpdEtJNHZGN1pJck5ldGNoUFRJSV9QWTlUQ3R0RHFwMzRUOVJkcS1WclhCUUJFNGswbzl4SVZWTTRMQ2xRZU5ueGhpTnNJRw?oc=5" target="_blank">Another day passes with Auburn student still missing in Japan, parents say - NBC News</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 06:56:57</div>
-					<small>Another day passes with Auburn student still missing in Japan, parents say  NBC News
-Alabama family pleads for return of son missing on family trip in Japan  CNN
-American college student missing in Kyoto, last seen by family one week ago  Japan Today
-Alabama community prays for missing Auburn student as search continues in Japan  WVTM
-Auburn student missing in Japan went off alone after family bickering on vacation, parents say  Fox News</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxQYzkwdzB2TWR2Q1JTQi1mUEVDREZianNDX0Y0X1Q0OVQ4d3VEdU4wemNfYllCOWNHelFzVXVCYzVPSmdteVlCNFlldkEyX0tWMnVRNU96Mm5iREEtOFJpLTg4XzJFeHlXakg4YlR5R0VPcHdidW9SVUJET21wbUpNM3hWUlJab1dKRjRxaU4xWUZ2bHNFZG55eDI3TWE0XzRPSEQwUVhwY2xfbzE2ZWU0X0hqVVd1dEl4bTVhVXlSRTVEYms?oc=5" target="_blank">Zelenskyy calls for face-to-face Ukraine war negotiations in letter to Putin - The Guardian</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 05:40:00</div>
-					<small>Zelenskyy calls for face-to-face Ukraine war negotiations in letter to Putin  The Guardian
+					<a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9GbERIclV4eC1kUEtXZFBfYU5yNWNWUk8wd0V0d0Jqb3N4S3BIMVRkVXRDcTRsRVo0N21Oc3NjSTZEc2d2Sk9KZjllX3VhYlBsaWhZbmhZUlVhNVZDVDBac2xxamtsRWZySERBd0J2UkEwZ3hCM1RRWHhvQQ?oc=5" target="_blank">Zelensky proposes direct meeting with Putin to end war - CNN</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:46:31</div>
+					<small>Zelensky proposes direct meeting with Putin to end war  CNN
 Zelensky proposes face-to-face talks in open letter to Putin  BBC
-Ukraine’s Zelenskyy Proposes Peace Talks in Letter to Putin  Bloomberg.com
-Zelensky asks Putin to meet face-to-face, with US ‘fully focused’ on Iran  The Hill
-Zelensky proposes direct meeting with Putin to end war  CNN</small>
+Ukraine’s Zelenskyy Proposes Peace Talks in Rare Letter to Putin  Bloomberg.com
+Zelenskyy calls for face-to-face Ukraine war negotiations in letter to Putin  The Guardian
+Zelensky asks Putin to meet face-to-face, with US ‘fully focused’ on Iran  The Hill</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOejEwSXI1cVRxemZvNmZBakxIUUptQ3pWOEQ0cms2UEw1VnpNWVdzUUI4dXFwS1o3YVVJQU1jVFAtTm1vQ3N1QXZyQWhhemFSYkVzRGpIc0F5MmRYVy1fR0hxbTRWTkVyTGdCaFh5ZXEzQmlKeDg1UjI0cDFZZC1kMk42ZXI?oc=5" target="_blank">Burnham confirms he will seek to replace Starmer as UK prime minister - Financial Times</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 04:37:25</div>
+					<small>Burnham confirms he will seek to replace Starmer as UK prime minister  Financial Times
+‘I wouldn’t flinch’: Burnham on social care, markets, Brexit – and the prospect of a general election  The Guardian
+Burnham says he would seek to enter any Labour leadership contest  BBC
+Labour mayor Burnham signals he would run in leadership contest against UK's Starmer  Reuters
+Being northern isn’t actually going to fix anything, Andy  The Telegraph</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mdC1vTHpoVVVGQ19UY2VHQm5HUkhFYmpsb2dydEFodG5GSHBMY2F2NkZhUDNvN0JYSkFKN3owNmlvX2pEa1lSbTQ1aVgwYWlZMkRlRkVTZXdiQQ?oc=5" target="_blank">Henry Nowak inquest to probe actions of police, coroner says - BBC</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/4 18:16:47</div>
+					<small>Henry Nowak inquest to probe actions of police, coroner says  BBC
+Opinion | The murder of Henry Nowak and the failure of British policing  The Washington Post
+Farage says woke kills - and the real, hard questions we could be asking are swamped by the culture war | Gaby Hinsliff  The Guardian
+Video of a dying teen handcuffed by police sparks outrage and riots across Britain  NPR
+Was this Britain’s George Floyd moment?  The Economist</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMitgFBVV95cUxONTJoTTdmcDZtelBwV1E3MmRmNEkxS2FvVDdqT2YtTjRWRDVuUkl5aUVFT1hMb1p6bjh5YS0zaEtPNkQtSXdBNl9adDNETGpNVkl3NnpEUy1ZTENzTHdJV1R4LUt0eVVsVjZ2RWxXeEtmekhmZXlrZlBVbjRFYmViN0ZXLWRsWWJIdmdtd3JqSUVJbDlTVHQ3Q1RJRERPbFRHVzR5cTRYck9CcjJaVVRXa3lnd0hWZw?oc=5" target="_blank">Ivanka Trump and Jared Kushner’s Albanian resort plan sets off days of protests - The Washington Post</a>
 					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 09:46:14</div>
 					<small>Ivanka Trump and Jared Kushner’s Albanian resort plan sets off days of protests  The Washington Post
-Jared Kushner vs the Flamingos - Albanians protest against luxury resort plans  Sky News
 Protests in Albania grow over Jared Kushner-backed luxury resort  The Guardian
+Jared Kushner-backed luxury resort plan sparks protest in Albania  BBC
 Jared Kushner's Albania resort sparks protests, EU concerns  DW
 Jared And Ivanka’s Sazan Island In Albania Faces Protests—Here’s Why  Forbes</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE0xUDZ6OFRNS2NIcWt6VWY5cHdUeVBGa1hRMENwd3U5YVFhN3RUY2lIWkd5MnhTQTREb2NWQ2FzcXZBR2N5TlFxWnpKTHZsNzMtQmpGWXB0eVUtc0w2bzU5SEtGY3NxM3ItOTRURXZFMUpuNUI3?oc=5" target="_blank">Live updates: Hezbollah and Israel trade new strikes as uncertainty surrounds US-Iran talks - CNN</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 12:12:00</div>
-					<small>Live updates: Hezbollah and Israel trade new strikes as uncertainty surrounds US-Iran talks  CNN
-Iran war updates: Israel continues attacks after new Lebanon ceasefire  Al Jazeera
-Between Beaufort and Beirut, Israel faces narrowing options against Hezbollah  The Times of Israel
-Israel kills 11 in Lebanon, a day after Trump said Israel and Hezbollah will de-escalate  AP News
-Israel to continue ground operation in southern Lebanon despite agreed ceasefire – as it happened  The Guardian</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxORV8wYWFMV1ZaNHFibkZlZWVjVHpaMEtPR2lDQ2xScEQyT3EzQ3Q1aWIyRXlYQUVyQjBSNEh1SVF5UFV4d3NBRmxGTUdkY3ZJNHlhM1ExTXNUckk5WklTSlp3VGU1T0w4MkluM3NCd0w0R3pGaGtqWlJLaVg1NUdQRktNVzRWR3pLc1QycE94TmNzaWpmejNRemNhN2RSWVVyd05zTnlDREppM2V3OFFoNDN0b0lkOUdDRERN?oc=5" target="_blank">Missing Sherpa guide found alive on Everest after funeral rites had begun - The Guardian</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 11:42:00</div>
-					<small>Missing Sherpa guide found alive on Everest after funeral rites had begun  The Guardian
-Mount Everest climber recounts moment he lost guide Dawa Sherpa  BBC
-Sherpa missing for a week on Everest found crawling toward base camp after his family begins funeral rites  Fox News
-Sherpa guide missing for a week on Mount Everest rescued while crawling to base camp  ABC News - Breaking News, Latest News and Videos
-Hillary Dawa Sherpa Survived Six Days Alone on Mount Everest After Being Left on the Peak  Outside Magazine</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNRWtqWkF5MmVIX09kdWxPTFIyTElrakZqRGI0TlFXZTNla1FXaEdWVW16ZkQ2dVdtRV9MNndDdTVySnR5WTU3V2lEQWpYT1hXeUlRVXJmWVpLeFRMT2MzdC16VTZNaDFUTk0yVDdDQnVRLS1QQ09IQ2RRX1lPVG1iNkxDMkM4X05mbXpHeUJpZzJQQQ?oc=5" target="_blank">ASTS, RKLB, RDW, SIDU Slip Overnight: Retail Hopes For SpaceX-Fueled S&P 500 Buying Frenzy Take A Hit - Yahoo Finance</a>
@@ -235,13 +247,8 @@ Hillary Dawa Sherpa Survived Six Days Alone on Mount Everest After Being Left on
 					<small>ASTS, RKLB, RDW, SIDU Slip Overnight: Retail Hopes For SpaceX-Fueled S&P 500 Buying Frenzy Take A Hit  Yahoo Finance
 SpaceX launches IPO website for retail investors as it seeks record $75 billion in public offering next week  Yahoo Finance
 Index Funds Make Room for More SpaceX Shares  Barron's
-Exclusive: SpaceX tells banks it won't move its $135-a-share IPO price  Reuters
-Who’s Excited for SpaceX’s I.P.O.? Space Nerds.  The New York Times</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOTGVma1lJWERqbVpiR2ZCeWNPYnhodTRaZmJWYnBldGFHdEFQNzNXejFncHJvYkVYdzFha1RsN05LVDB5alRNWGJPWXcwVUVFai00a2dBaW9TY2VGZlhIMXFxaHpfWnh2MFVWZHZLNTJ1SUdpS0FZWVMzbEVyY0hzUFRkQTlkaEE5QlJBR1dZMFlfV1E4VGI2dElpOTlKNWNNaHhVNG8wa9IBrAFBVV95cUxNc1c3UXVxOXRPUEVTMlF5VzJvbDJVNGpCTzhpc0VQSjdRMlZETlltekFQUGM2Ql9jcHFDdjB2ZTE3MkdIWEF2MW5WSlcwU3dwTFE0eXRjdF9jNG1PclhGdEdiSHIyOXFvX0xNMGlkRDd6V2NaRVY0VGh2bGQtWnZmVTBtVU5JYkFfOERPYnNfNi1EY2cwY041RWl3NHRvTFFiQkJwR1VBRl9NY3N1?oc=5" target="_blank">South Korea stocks fall 4% as tech heavyweights follow plunge in Wall Street's AI-linked names - CNBC</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 07:48:20</div>
-					<small>South Korea stocks fall 4% as tech heavyweights follow plunge in Wall Street's AI-linked names  CNBCSee more headlines & perspectives on Google News</small>
+Elon Musk's net worth poised to sail past $1 trillion in SpaceX IPO  CNBC
+Exclusive: SpaceX tells banks it won't move its $135-a-share IPO price  Reuters</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQUk5rMk9FZUdmX25QbTRfb202QnNDTXlMWC1HeEV4b212V1FGOFQ5ZE1rV1ZWWTU5OGdhS3dYYkR3SThpTlpEZ3lMdkdPY1EzQ3dyU1N6MGJHek9MblhWcG5DR1oxM0l3amVuNWRleWF4bXJkZGJKU1AtN2pQSXR2d0NZbGR1N1JwZmQwUk1CQ1BuQQ?oc=5" target="_blank">Lululemon Cuts Outlook as Headwinds Mount - WSJ</a>
@@ -254,12 +261,30 @@ Lululemon Trims Outlook, Adding Pressure Ahead of New CEO  Bloomberg.com</smal
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE5nMnAxdTJITGFvb1JkcUR5ZnJxS0drY3I5RDVhRlZKOXVZNHhRazRBV29hamZ2TUZtRGFkdGNacDZaYVJ1eElXa05RbkQzSjhsRElxTnkyZUFLbkpWSko3N014c1lqYU1hOFZTMWR3?oc=5" target="_blank">S&P will not change the rules to allow SpaceX into its benchmark index early - Axios</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 12:32:01</div>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 13:47:04</div>
 					<small>S&P will not change the rules to allow SpaceX into its benchmark index early  Axios
 SpaceX, Other Mega IPOs Denied Fast Index Entry by S&P  Bloomberg.com
-When Will SpaceX, Anthropic, and OpenAI Join the S&P 500 Index?  Yahoo Finance
+CNBC Daily Open: SpaceX gets a reality check  CNBC
 SpaceX blocked from early US benchmark index entry as S&P reaffirms existing rules  Reuters
 In ‘wild’ twist, SpaceX won’t be allowed early entry to the S&P 500 after all  MarketWatch</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPWlp5cWpzMk84YkNwR1FONFprVndTQkhzZHY0eXJ4WTBVQ3JTbE5rbW1ab2RBbkJBUlV1UXk0eXVIY2Zocy1FUWNnclZsUEFEVktFZ2dCTnRSM1RUQ2FmRzZZMWhZMGFZOGRTcndhMURCUFlpQm00YTk1Z1BGMkhSMkRZOTBqODJSX25JNFZIdDdEaW9hTHphekx2MEFKbzcteHIwU1ZlZDc4aHJYa3VyMQ?oc=5" target="_blank">Korean Stocks Slide as Cracks Emerge in World-Beating Rally - Bloomberg.com</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 06:30:00</div>
+					<small>Korean Stocks Slide as Cracks Emerge in World-Beating Rally  Bloomberg.com
+South Korea stocks fall 5% as tech heavyweights follow plunge in Wall Street's AI-linked names  CNBC
+Asia stocks pressured by tech losses; Nikkei, KOSPI slide on chip losses  Investing.com
+Asian shares drop, with South Korea's Kospi down more than 5%  Click2Houston
+Broadcom-Linked AI Selloff Hits Samsung, SK Hynix Stocks In Korea: DRAM Eyes Second Day In Red  Stocktwits</small>
+				</li>
+				<li>
+					<a href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxOSFBveDNCdG1FekxEc2RQWFpCRm9vYWlNTWZOUXlaRV9kcHVINFJ1SkRvVWlhN1Myb3dBTG1MMFdiNktQUUc5QjFpNEVaOE8zQWxVMXpOQzlvRmRwdVV6d1J6aHgzZDZYYlREU1VOc2hLS2tlcnliaUZWb1ZRZ2U3VkJwZTVSeERja3Rzb21laVBOTVNXalhhWnhtZTN0VS1TRjJPdkdwdFNjUTVUX1V0SjNCUEhsQ3VQcTVwdXhzOXNIU3JjdlYyRW1NN1pvYnMtTEE3NkhfM0RhLW5YZUJz0gHkAUFVX3lxTE5GcTVUZ2pnMzMxaUo0WlQ2UHlPbFEzaF83eDM2VU8xSzJJZnhxTXRWRU10OUJvUC02RDdHTDlwNmxaTENtLVdpUnlSRXhqRy1xclNhODRMRk9wbFBVT0VvWnQtNTdJYkVkTjFOeU9KYnF6dVJPcHEzRHFxQVdRZ3ljRW5Nbjk0SEt4WVhTanV6RTdRTW9SSU1vd1lsZDkySm9rMnJ4dzhpM3NDNTNmdW95V3E2d2V4b1VKR2tEVHlTLWM4TFJFV2RuVkVyQjVDb0lybXhEMy1lX2k4NHBkV1BpeDNXeQ?oc=5" target="_blank">Samsung LSI’s Price Gouging Pushes Exynos 2600 To $270/Unit, Forcing Samsung Mobile To Bank On Qualcomm For The Galaxy Z Flip 8 - Wccftech</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 00:38:00</div>
+					<small>Samsung LSI’s Price Gouging Pushes Exynos 2600 To $270/Unit, Forcing Samsung Mobile To Bank On Qualcomm For The Galaxy Z Flip 8  Wccftech
+Galaxy Z Flip 8 reportedly will bring back Snapdragon chips alongside Exynos  9to5Google
+You won't believe how Samsung intends to save production costs for the Galaxy Z Flip 8  PhoneArena
+Samsung Galaxy Z Flip8 to have both Exynos and Snapdragon chips - GSMArena.com news  GSMArena.com
+Galaxy Z Flip 8 could follow Galaxy S series with a dual-chip strategy  Android Authority</small>
 				</li>
 				<li>
 					<a href="https://news.google.com/rss/articles/CBMie0FVX3lxTFBFb3MySnl3VTRwckNPTTBpSzdpMmtuUWdnS0M4a3QwRW1aMUNleWtUZEF1WERKMWoycU5sTGFqTldnalIzOHhaZmYyZ21oRklhaWVzUlFjUWJhNjcyYzhKVEl1a1NLaHVuRVU2YUhMTkNsWDVuc0k4V3h1cw?oc=5" target="_blank">Google is letting social media stars customize their search result page - The Verge</a>
@@ -269,15 +294,6 @@ A new profile to help publishers and creators highlight their work on Search  
 Introducing Search profiles: A new, official presence for creators on Google  YouTube Official Blog
 Google introduces Search profiles within Google Discover  Search Engine Land
 Google Launches 'Search Profiles' for Creators and Publishers as AI Summaries Cause Traffic Referral Drop-Off  Variety</small>
-				</li>
-				<li>
-					<a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQVXdZRkRJU0dHdnhfVGZuc0plSWFBUVpQTWltLXRfYXEyNFQzRFB2TmVkMWJRdXlJTzFZWWFHY2tvTlo0Z1h1X0NTdWpiaTVySEczNW5OUHNzTFJtTHpvOGJXdEFaaDRaTDNxYjcxMzdyUmVaX3ZpQ2tXRVFEcVcwY3B4amEycG03c0JBQjZDZjM0Zw?oc=5" target="_blank">Meta rolls out a new AI creator assistant on Facebook - TechCrunch</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 00:32:48</div>
-					<small>Meta rolls out a new AI creator assistant on Facebook  TechCrunch
-Introducing Creator Assistant, Plus More Languages For AI Translations on Facebook  meta.com
-Meta's Latest AI Tool Gives Creators A 'Brainstorming Partner'  Engadget
-Meta launches creator assistant chatbot  Social Media Today
-Meta’s new AI assistant helps creators decode performance and find ideas  Storyboard18</small>
 				</li></ul>
 			</div>
 			<div class="news-wrap" data-key="rdf">
@@ -469,6 +485,13 @@ Read Full Article at RT.com</small>
 			<div class="news-wrap" data-key="scmp">
 				<ul>
 				<li>
+					<a href="https://www.scmp.com/news/asia/southeast-asia/article/3356063/brunei-picks-helicopter-flying-prince-abdul-mateen-foreign-minister?utm_source=rss_feed" target="_blank">Brunei picks helicopter-flying Prince Abdul Mateen as foreign minister</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 14:27:11</div>
+					<small>Brunei’s Sultan Hassanal Bolkiah has named one of his youngest sons as foreign minister in a major cabinet reshuffle – largely seen as a move to prepare for the next generation of leaders in the oil-rich kingdom.
+As the 10th child and fourth son of the sultan, Prince Abdul Mateen is down the line of succession, but his matinee idol looks have earned him more than 3 million followers on Instagram, providing a modern face to the royal family.
+Another younger son, Prince Abdul Malik, was also...</small>
+				</li>
+				<li>
 					<a href="https://www.scmp.com/week-asia/politics/article/3356049/us-wielding-new-tariff-threat-secure-big-bargain-india-trade-talks?utm_source=rss_feed" target="_blank">Is US wielding new tariff threat to secure big bargain in India trade talks?</a>
 					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/5 13:27:02</div>
 					<small>The threat by the US to impose additional tariffs on imports from India over forced labour supply-chain concerns is a “pressure” tactic deployed by Washington to drive a harder bargain in its trade talks with New Delhi, according to analysts.
@@ -595,13 +618,6 @@ De Villar Rizalyn Panganiban, 35, a Filipino, allegedly belonged to a criminal g
 					<small>Just over a year after consolidating its status as Singapore’s main opposition, the Workers’ Party (WP) is grappling with internal fissures as chief Pritam Singh’s role is being questioned by his own members.
 Singh, who has led the WP since 2018, is facing a special conference later this month called by 25 cadre members pushing for him to step down as secretary general for breaching the party constitution, according to local media.
 Sources say there is a generational divide in the party, with...</small>
-				</li>
-				<li>
-					<a href="https://www.scmp.com/opinion/asia-opinion/article/3355563/5-lessons-asia-it-studies-wars-privilege-peace?utm_source=rss_feed" target="_blank">5 lessons for Asia as it studies wars from the privilege of peace</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 2026/6/4 05:30:06</div>
-					<small>Since the Ukraine war began in 2022, Asia has been watching conflict as if enrolled in a study course. We have heard every argument: Nato enlargement, Russian insecurity, Ukrainian sovereignty, European fear, American power, energy politics, sanctions, nationalism and resistance.
-We have watched Gaza burn. We have watched the United States capture Venezuela’s president and defend the act as lawful. We have watched Iran absorb attacks and retaliate.
-For Asians, these are no longer distant events....</small>
 				</li></ul>
 			</div>
 
