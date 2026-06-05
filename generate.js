@@ -20,7 +20,21 @@ async function build() {
 		try{
 			const feed = await parser.parseURL(item.rssUrl);
 			feed.items.slice(0,20).forEach(art=>{
-				let pubTime = art.pubDate || "暂无发布时间";
+				let pubTime =
+					art.pubDate ||
+					art.isoDate ||
+					art["dc:date"] ||
+					art.updated ||
+					art.published;
+
+				if(pubTime){
+					pubTime = new Date(pubTime).toLocaleString("zh-CN",{
+						timeZone:"Asia/Shanghai"
+					});
+				}else{
+					pubTime = "暂无发布时间";
+				}
+
 				listItem += `
 				<li>
 					<a href="${art.link}" target="_blank">${art.title}</a>
