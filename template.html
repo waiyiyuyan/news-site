@@ -12,47 +12,47 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 14px;
-            background: #f7f8fa;
+            background: #ffffff;
         }
-        /* iOS导航样式 */
+        /* X日间导航 */
         nav {
-            background: rgba(255,255,255,0.85);
-            backdrop-filter: blur(10px);
-            border-radius: 14px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            background: #f7f9fa;
+            border-radius: 8px;
             padding:6px;
-            margin-bottom:20px;
+            margin-bottom:16px;
         }
         .nav-wrap {
-			display: flex;
-			/* 删掉 flex-wrap: wrap; 禁止换行 */
-			gap:4px;
-			overflow-x: auto;
-			padding:4px 2px;
-			/* 隐藏滚动条（苹果手机无痕） */
-			-webkit-overflow-scrolling: touch;
-			scrollbar-width: none;
-		}
+            display: flex;
+            gap:6px;
+            overflow-x: auto;
+            padding:4px 2px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .nav-wrap::-webkit-scrollbar {
+            display: none;
+        }
         .nav-wrap button {
-			padding:9px 18px;
-			border-radius:10px;
-			font-size:15px;
-			color:#333;
-			background:transparent;
-			border:none;
-			cursor:pointer;
-			/* 按钮不压缩，固定自身宽度 */
-			flex-shrink: 0;
-		}
+            padding:9px 16px;
+            border-radius:999px;
+            font-size:14px;
+            color:#0f1419;
+            background:transparent;
+            border:1px solid #d2d9e0;
+            cursor:pointer;
+            flex-shrink: 0;
+        }
+        /* X标志性蓝色选中 */
         .nav-wrap button.active {
-            background:#007aff;
+            background:#1d9bf0;
+            border: 1px solid #1d9bf0;
             color:#fff;
         }
         .nav-wrap button:not(.active):hover {
-            background:#eee;
+            background:#eef3f8;
         }
         .news-wrap{
             display:none;
@@ -60,30 +60,34 @@
         .news-wrap.show{
             display:block;
         }
+        /* X白卡片样式 */
         ul {
             list-style: none;
             background:#fff;
-            border-radius:14px;
+            border: 1px solid #e4e7ec;
+            border-radius:12px;
             overflow:hidden;
-            box-shadow:0 1px 6px rgba(0,0,0,0.05);
         }
         li {
-            padding:16px;
-            border-bottom:1px solid #f2f2f2;
+            padding:18px 16px;
+            border-bottom:1px solid #e4e7ec;
         }
         li:last-child{
             border-bottom:none;
         }
         li a {
             font-size:17px;
-            color:#111;
+            color:#0f1419;
             text-decoration:none;
+        }
+        li a:hover {
+            text-decoration: underline;
         }
         small {
             display:block;
             margin-top:8px;
             font-size:14px;
-            color:#777;
+            color:#657786;
             line-height:1.5;
         }
     </style>
