@@ -9,10 +9,20 @@
     "key": "nyt",
     "rssUrl": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
   },
-  
   {
-    "name": "CNN",
-    "key": "cnn",
-    "rssUrl": "http://rss.cnn.com/rss/edition.rss"
+    "name": "卫报",
+    "key": "guardian",
+    "rssUrl": "https://www.theguardian.com/world/rss"
+  },
+  {
+    "name": "美国公共广播",
+    "key": "npr",
+    "rssUrl": "https://feeds.npr.org/1001/rss.xml"
+  },
+  {
+    "name": "华盛顿邮报",
+    "key": "washington",
+    "rssUrl": "https://feeds.washingtonpost.com/rss/world"
   }
+  
 ]
