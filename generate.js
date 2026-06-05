@@ -48,4 +48,6 @@ async function build() {
     console.log("生成完成 index.html");
 }
 
-build();
+build().then(()=>{
+    process.exit(0);
+});
