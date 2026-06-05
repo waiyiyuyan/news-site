@@ -27,19 +27,26 @@
             margin-bottom:20px;
         }
         .nav-wrap {
-            display: flex;
-            flex-wrap: wrap;
-            gap:4px;
-        }
+			display: flex;
+			/* 删掉 flex-wrap: wrap; 禁止换行 */
+			gap:4px;
+			overflow-x: auto;
+			padding:4px 2px;
+			/* 隐藏滚动条（苹果手机无痕） */
+			-webkit-overflow-scrolling: touch;
+			scrollbar-width: none;
+		}
         .nav-wrap button {
-            padding:9px 18px;
-            border-radius:10px;
-            font-size:15px;
-            color:#333;
-            background:transparent;
-            border:none;
-            cursor:pointer;
-        }
+			padding:9px 18px;
+			border-radius:10px;
+			font-size:15px;
+			color:#333;
+			background:transparent;
+			border:none;
+			cursor:pointer;
+			/* 按钮不压缩，固定自身宽度 */
+			flex-shrink: 0;
+		}
         .nav-wrap button.active {
             background:#007aff;
             color:#fff;
@@ -287,7 +294,7 @@
 				</li>
 				<li>
 					<a href="https://www.nytimes.com/2026/06/04/world/05int-theworld-tennis-french-open-satrapi-lebanon.html" target="_blank">Tennis Giants Tumble</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Thu, 04 Jun 2026 21:01:09 +0000</div>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 04:35:29 +0000</div>
 					<small>All the big names are out at the French Open. The result is a very confusing, and very exciting, tournament.</small>
 				</li>
 				<li>
@@ -428,7 +435,7 @@ Under the prime minister, Sanae Takaichi, Japan has quickened its pivot to a mor
 				</li>
 				<li>
 					<a href="https://www.theguardian.com/australia-news/live/2026/jun/05/tax-changes-labor-coalition-politics-housing-prices-nsw-pharmacists-trump-tariffs-ntwnfb" target="_blank">Australia news live: ASIC launches investigation into KPMG after whistleblower claims</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 04:19:56 GMT</div>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 04:52:56 GMT</div>
 					<small>Follow today’s news live
 
 Get our breaking news email, free app or daily news podcast
@@ -441,6 +448,32 @@ Victim-survivors and their loved ones will no longer be forced to sit in court a
 While I’m glad we’re finally here, it should not have taken so long for the Liberals and Nationals to listen to victim-survivors and their advocates and drop their opposition to these reforms.
 This win belongs to every survivor in this country. … That is hard-won dignity.
 But I’m not done. Every survivor in every corner of this country deserves the same protection, and I will fight until every jurisdiction reflects that. NSW was first. The rest will follow.
+ Continue reading...</small>
+				</li>
+				<li>
+					<a href="https://www.theguardian.com/australia-news/2026/jun/05/trust-in-ai-roy-morgan-australia-university-professor-opinion-piece-technology" target="_blank">A uni professor admitted using AI to write an opinion piece. Here’s what it revealed about trust in the technology</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 04:49:15 GMT</div>
+					<small>Without disclosing that work has been generated using the technology, faith in existing industries will continue to be undermined 
+
+Follow our Australia news live blog for latest updates
+
+Get our breaking news email, free app or daily news podcas
+
+When a university vice-chancellor this week admitted to using AI in writing an opinion piece for a major Australian masthead, but did not disclose that use prior to publication, it highlighted the growing gap between people’s use of AI and trust in the technology.
+Data from Roy Morgan this week showed 13.6m or 58% of the population older than 14 now use AI each month, with ChatGPT being the most popular, followed by Google’s Gemini and Microsoft Copilot.
+ Continue reading...</small>
+				</li>
+				<li>
+					<a href="https://www.theguardian.com/australia-news/2026/jun/05/live-cockroaches-seized-nsw-breeder-australia" target="_blank">More than 100,000 cockroaches worth $200,000 seized from NSW breeder in record-breaking bust</a>
+					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 04:49:07 GMT</div>
+					<small>The invertebrates were likely destined for the pet trade, including as reptile food
+
+Follow our Australia news live blog for latest updates
+
+Get our breaking news email, free app or daily news podcast
+
+More than 100,000 live exotic cockroaches have been seized from a commercial breeder in New South Wales in a record-breaking bust linked to the pet trade.
+Biosecurity officials seized the animals, which have a commercial value of up to $200,000, from a breeder in Bathurst in the state’s central west this week.
  Continue reading...</small>
 				</li>
 				<li>
@@ -467,32 +500,6 @@ Get our breaking news email, free app or daily news podcast
 
 The Sydney man who disarmed one of the Bondi terror attackers has been charged with assaulting his father.
 Ahmed al-Ahmed, 44, is accused of allegedly putting his father in a headlock on 9 March at a house in Bankstown, in the city’s west.
- Continue reading...</small>
-				</li>
-				<li>
-					<a href="https://www.theguardian.com/australia-news/2026/jun/05/live-cockroaches-seized-nsw-breeder-australia" target="_blank">More than 100,000 cockroaches worth $200,000 seized from NSW breeder in record-breaking bust</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Fri, 05 Jun 2026 00:22:10 GMT</div>
-					<small>The invertebrates were likely destined for the pet trade, including as reptile food
-
-Follow our Australia news live blog for latest updates
-
-Get our breaking news email, free app or daily news podcast
-
-More than 100,000 live exotic cockroaches have been seized from a commercial breeder in New South Wales in a record-breaking bust linked to the pet trade.
-Biosecurity officials seized the animals, which have a commercial value of up to $200,000, from a breeder in Bathurst in the state’s central west this week.
- Continue reading...</small>
-				</li>
-				<li>
-					<a href="https://www.theguardian.com/australia-news/2026/jun/05/australia-ski-season-snow-climate-change-el-nino-impact" target="_blank">‘That’s a bad combination’: why Australia may be in for a slushy snow season</a>
-					<div style="color:#888;font-size:13px;margin:5px 0;">🕒 Thu, 04 Jun 2026 15:00:09 GMT</div>
-					<small>Snow arrives in time for the start of ski season, but climate change and El Niño mean it may not stick around for long, experts say
-
-Follow our Australia news live blog for latest updates
-
-Get our breaking news email, free app or daily news podcast
-
-There was optimism across Australian alpine resorts this week as their social media channels filled with footage of snow flurries that arrived just in time for the opening of the ski season this weekend.
-“We couldn’t be more excited,” said the Instagram account of Perisher, the southern hemisphere’s biggest ski resort, in Kosciuszko national park in New South Wales, as hands swept the fresh snow from outdoor tables.
  Continue reading...</small>
 				</li></ul>
 			</div>
