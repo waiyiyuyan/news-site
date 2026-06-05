@@ -2,7 +2,7 @@ name: Auto Update BBC News
 on:
   push:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '0 */2 * * *'
 
 # 核心修复：给Action开启仓库写入权限，解决git push 128报错
 permissions:
