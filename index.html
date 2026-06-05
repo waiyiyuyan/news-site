@@ -1,114 +1,280 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>BBC News Feed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球新闻聚合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 14px;
+            background: #f7f8fa;
+        }
+        /* iOS导航样式 */
+        nav {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding:6px;
+            margin-bottom:20px;
+        }
+        .nav-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap:4px;
+        }
+        .nav-wrap button {
+            padding:9px 18px;
+            border-radius:10px;
+            font-size:15px;
+            color:#333;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        .nav-wrap button.active {
+            background:#007aff;
+            color:#fff;
+        }
+        .nav-wrap button:not(.active):hover {
+            background:#eee;
+        }
+        .news-wrap{
+            display:none;
+        }
+        .news-wrap.show{
+            display:block;
+        }
+        ul {
+            list-style: none;
+            background:#fff;
+            border-radius:14px;
+            overflow:hidden;
+            box-shadow:0 1px 6px rgba(0,0,0,0.05);
+        }
+        li {
+            padding:16px;
+            border-bottom:1px solid #f2f2f2;
+        }
+        li:last-child{
+            border-bottom:none;
+        }
+        li a {
+            font-size:17px;
+            color:#111;
+            text-decoration:none;
+        }
+        small {
+            display:block;
+            margin-top:8px;
+            font-size:14px;
+            color:#777;
+            line-height:1.5;
+        }
+    </style>
 </head>
 <body>
-    <h1>BBC World News</h1>
-    <ul>
+    <!-- 导航按钮占位 -->
+    <nav>
+        <div class="nav-wrap">
+            <button data-key="bbc" class="active">BBC 新闻</button><button data-key="cnn" class="">CNN 新闻</button>
+        </div>
+    </nav>
+    <!-- 全部新闻容器占位 -->
+    
+        <div class="show news-wrap" data-key="bbc">
+            <ul>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cwy2ypyp4x4o?at_medium=RSS&at_campaign=rss" target="_blank">Zelensky proposes face-to-face talks in open letter to Putin</a>
+                <small>Ukraine's president tells the Russian leader that only "direct engagement" between the two countries could end the war, with the US focused on Iran.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss" target="_blank">Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon</a>
+                <small>The United States announced the ceasefire agreement on Wednesday night following a fresh round of talks.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cn0pl0wvvz0o?at_medium=RSS&at_campaign=rss" target="_blank">Trump hits back at 'unpatriotic' vote after House rebukes him over Iran</a>
+                <small>The lower chamber of Congress passed a measure that seeks to halt further military action, in a vote seen as largely symbolic.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cx2124zylxno?at_medium=RSS&at_campaign=rss" target="_blank">Ex-wife of Dubai ruler's nephew in custody, prosecutors say</a>
+                <small>Zeynab Javadli had not been in contact with any of her friends since Tuesday.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss" target="_blank">Mangrove forests are healing after decades of human destruction</a>
+                <small>Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cnvpvd52j95o?at_medium=RSS&at_campaign=rss" target="_blank">How Trump's White House ballroom plan has doubled in size and cost over a year</a>
+                <small>BBC Verify examines how the biggest change to the White House in decades has transformed in the last year.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c2020jrpxz3o?at_medium=RSS&at_campaign=rss" target="_blank">Here's why election results in the second largest US city are so slow</a>
+                <small>It could take weeks - or even a month - before we know who won elections in California and Los Angeles.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss" target="_blank">US plans to fight flesh-eating screwworm outbreak with flies and dogs</a>
+                <small>The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cp8p8e1gnx7o?at_medium=RSS&at_campaign=rss" target="_blank">Dutch police investigate suspected drugging and sexual assault of multiple women</a>
+                <small>Police raided the suspects' homes after tip-offs from German and UK authorities.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c4g0nnj51jyo?at_medium=RSS&at_campaign=rss" target="_blank">Oscar-nominated Persepolis author Marjane Satrapi dies aged 56</a>
+                <small>The French-Iranian author and illustrator was known for her graphic novel series and Oscar-nominated film.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cvgzgd2xe2zo?at_medium=RSS&at_campaign=rss" target="_blank">Marilyn Monroe auction features star's make-up and gowns on 100th birthday</a>
+                <small>The auction has already brought in thousands in bids and includes intimate items from her life.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cg5prr9gr1ro?at_medium=RSS&at_campaign=rss" target="_blank">Israeli strikes kill 11 people in Gaza City, medics say</a>
+                <small>Women and children were among those killed in the attacks on four residential buildings, which Israel's military says killed four Hamas security officials.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c3r2rdjv2n1o?at_medium=RSS&at_campaign=rss" target="_blank">Kushner-backed luxury resort plan sparks protests in Albania</a>
+                <small>Demonstrators say the project backed by Donald Trump's son-in-law would harm a protected environment.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c2e2e71xyjzo?at_medium=RSS&at_campaign=rss" target="_blank">John Bolton expected to plead guilty in classified documents case, sources confirm</a>
+                <small>Trump's former advisor turned critic had reached a deal with prosecutors, two people said.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cwy255wzdqro?at_medium=RSS&at_campaign=rss" target="_blank">Charges dropped against Budapest mayor over 2025 Pride march</a>
+                <small>Budapest's liberal Mayor Gergely Karacsony had been charged with helping to organise the banned 2025 march.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/sport/mixed-martial-arts/articles/cx21778x81zo?at_medium=RSS&at_campaign=rss" target="_blank">Trump says Eiffel Tower-like UFC structure may stay</a>
+                <small>President Donald Trump says he may choose to leave a purpose-built UFC arena standing at the White House because it is "attractive to a lot of people".</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cpdpwgxl1qzo?at_medium=RSS&at_campaign=rss" target="_blank">Heavy gunfire in Somali capital as row over election delay escalates</a>
+                <small>The opposition has called for protests after the president's term in office was extended by a year.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/c0r2klj0nyxo?at_medium=RSS&at_campaign=rss" target="_blank">Ukraine accused of killing four in occupied Crimea</a>
+                <small>At least 10 people have been injured in the attacks, according to Russian-backed officials.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cvgz2yjl4y3o?at_medium=RSS&at_campaign=rss" target="_blank">Missing Sherpa guide found on Mount Everest after 'miracle' self-rescue</a>
+                <small>Cleaners found Dawa Sherpa crawling towards Base Camp six days after he went missing at a higher altitude.</small>
+            </li>
+            <li>
+                <a href="https://www.bbc.com/news/articles/cd7p11010g5o?at_medium=RSS&at_campaign=rss" target="_blank">Bondi Beach shooting hero charged with assault</a>
+                <small>Ahmed al Ahmed disarmed one of the alleged shooters during the deadly attack at a Jewish event.</small>
+            </li></ul>
+        </div>
+        <div class="news-wrap" data-key="cnn">
+            <ul>
+            <li>
+                <a href="https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html" target="_blank">Trump pleads not guilty to 34 felony counts</a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/videos/politics/2023/04/05/maggie-haberman-donald-trump-speech-indictment-reaction-sot-cnntm-vpx.cnn" target="_blank">Haberman reveals why Trump attacked judge and his family in speech</a>
+                <small>CNN political contributor Maggie Haberman explains the reasoning behind Donald Trump's attacks on the judge and his family during a speech at his Mar-a-Lago resort after he was arraigned on felony charges.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/collections/intl-trump-040223/" target="_blank">What to know about the Trump indictment on the eve of his court appearance</a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://cnn.it/411KYN7" target="_blank">READ: Trump indictment related to hush money payment</a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://edition.cnn.com/webview/europe/live-news/russia-ukraine-war-news-04-03-23/index.html" target="_blank">Russian authorities detain suspect over St. Petersburg cafe blast</a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/videos/world/2023/04/02/russian-military-blogger-vladlen-tatarsky-killed-cafe-explosion-chance-vpx.cnn" target="_blank">Video shows moment of deadly explosion at cafe in Russia</a>
+                <small>A well-known Russian military blogger, Vladlen Tatarsky, was killed in an explosion at a cafe in St. Petersburg, authorities said. CNN's Matthew Chance reports.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/collections/intl-ukraine-030423/" target="_blank">Wall Street Journal reporter Evan Gershkovich appeals against arrest, Russian state media says</a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/03/politics/chinese-spy-balloon/index.html" target="_blank">Suspected Chinese spy balloon was able to transmit information back to Beijing</a>
+                <small>The suspected Chinese spy balloon that transited the US earlier this year was able to capture imagery and collect some signals intelligence from US military sites, a source familiar with the matter tells CNN.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/04/asia/tsai-ing-wen-taiwan-mccarthy-meeting-analysis-intl-hnk/index.html" target="_blank">Beijing promised to 'fight back' over Taiwan leader's US visit. But this time it has more to lose</a>
+                <small>An anticipated meeting between Taiwan's President Tsai Ing-wen and US House Speaker Kevin McCarthy in California this week has sparked concerns of a repeat of the pressure campaign China launched last year when then-Speaker Nancy Pelosi visited Taipei.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/videos/world/2023/04/03/soldiers-russia-ukraine-war-david-mckenzie-pkg-ovn-intl-ldn-vpx.cnn" target="_blank">'Scary, cold, hungry and lonely': Volunteer soldier shares experience on front line</a>
+                <small>A young volunteer soldier, Akula, who signed up for the war at the beginning of the Russian invasion is now dealing with the trauma of war. He spoke to CNN's David McKenzie about his time on the front lines and how it has affected his mental health.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/03/world/artemis-2-astronaut-crew-scn/index.html" target="_blank">The four astronauts NASA picked for the first crewed moon mission in 50 years</a>
+                <small>Astronauts who will helm the first crewed moon mission in five decades were revealed on Monday, queuing up the quartet to begin training for the historic Artemis II lunar flyby that is set to take off in November 2024.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/02/europe/french-minister-playboy-cover-intl/index.html" target="_blank">French minister under fire for Playboy magazine cover</a>
+                <small>French government minister Marlene Schiappa has come under fire from members of her own party after appearing on the front cover of Playboy magazine.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/videos/world/2023/04/03/finland-prime-minister-sanna-marin-concedes-election-right-wing-party-wins-ovn-intl-ldn-vpx.cnn" target="_blank">Why did Finland's PM lose? Reporter explains the key issue voters cared about</a>
+                <small>Finland's left-wing Prime Minister Sanna Marin conceded defeat in the country's parliamentary election as the opposition right-wing National Coalition Party claimed victory in a tightly fought contest. CNN's Laila Harrak spoke with New York Times' Chief Diplomatic Correspondent Steven Erlanger to discuss how the popular politician lost the election.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/04/investing/british-pound-currency-dollar/index.html" target="_blank">Britain's pound is beating every other major currency this year</a>
+                <small>The British pound crashed to a record low last fall as investors rebelled against budget plans by former Prime Minister Liz Truss. Now, it's enjoying a comeback.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/02/europe/sanna-marin-finland-elections-concedes-intl/index.html" target="_blank">Finland's Prime Minister Sanna Marin concedes election</a>
+                <small>Finland's left-wing Prime Minister Sanna Marin conceded defeat on Sunday in the Nordic country's parliamentary election as the opposition right-wing National Coalition Party (NCP) claimed victory in a tightly fought contest.</small>
+            </li>
+            <li>
+                <a href="https://cnn.it/40OSomK" target="_blank">Hundreds of millions at risk from Chinese shopping app malware </a>
+                <small></small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/style/article/beauty-skincare-climate/index.html" target="_blank">The $500 billion beauty industry's 'green' ambitions are a patchwork at best. And they're falling short</a>
+                <small>The escalating climate crisis is shifting many people's purchasing patterns and this extends to the $500 billion dollar global beauty industry which is grappling with a range of sustainability challenges across product manufacturing, packaging and disposal.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/03/health/nasal-vaccine-sterilizing-immunity/index.html" target="_blank">A new approach to a Covid-19 nasal vaccine shows early promise</a>
+                <small>Scientists in Germany say they've been able to make a nasal vaccine that can shut down a Covid-19 infection in the nose and throat, where the virus gets its first foothold in the body.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/videos/world/2023/04/03/man-throws-yogurt-on-women-iran-president-raisi-hijab-is-law-nada-bashir-ovn-intl-ldn-vpx.cnn" target="_blank">Video shows moment man throws yogurt on two women in Iran</a>
+                <small>Video shows an incident at a store in the Iranian city of Shandiz where a man approached two unveiled women before proceeding to grab a tub of yogurt from the store and throw it, hitting both women in the head. The video then appears to show a male staff member removing the suspect from the store. CNN is not able to verify what was said immediately before the confrontation.</small>
+            </li>
+            <li>
+                <a href="https://www.cnn.com/2023/04/03/middleeast/israel-protests-military-veterans-intl-cmd/index.html" target="_blank">Israeli military veterans, a backbone of protest movement, vow to keep demonstrating</a>
+                <small>In a sea of Israeli flags, Yiftach Golov holds one that looks a little different.</small>
+            </li></ul>
+        </div>
 
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cwy2ypyp4x4o?at_medium=RSS&at_campaign=rss" target="_blank">Zelensky proposes face-to-face talks in open letter to Putin</a><br>
-			  <small>Ukraine's president tells the Russian leader that only "direct engagement" between the two countries could end the war, with the US focused on Iran.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c052343r812o?at_medium=RSS&at_campaign=rss" target="_blank">Hezbollah rejects renewed ceasefire agreed by Israel and Lebanon</a><br>
-			  <small>The United States announced the ceasefire agreement on Wednesday night following a fresh round of talks.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cn0pl0wvvz0o?at_medium=RSS&at_campaign=rss" target="_blank">Trump hits back at 'unpatriotic' vote after House rebukes him over Iran</a><br>
-			  <small>The lower chamber of Congress passed a measure that seeks to halt further military action, in a vote seen as largely symbolic.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cx2124zylxno?at_medium=RSS&at_campaign=rss" target="_blank">Ex-wife of Dubai ruler's nephew in custody, prosecutors say</a><br>
-			  <small>Zeynab Javadli had not been in contact with any of her friends since Tuesday.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cn4pk07npvvo?at_medium=RSS&at_campaign=rss" target="_blank">Mangrove forests are healing after decades of human destruction</a><br>
-			  <small>Swampy mangrove forests are staging a surprise comeback - which is good news for coastal communities and the climate.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cnvpvd52j95o?at_medium=RSS&at_campaign=rss" target="_blank">How Trump's White House ballroom plan has doubled in size and cost over a year</a><br>
-			  <small>BBC Verify examines how the biggest change to the White House in decades has transformed in the last year.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c2020jrpxz3o?at_medium=RSS&at_campaign=rss" target="_blank">Here's why election results in the second largest US city are so slow</a><br>
-			  <small>It could take weeks - or even a month - before we know who won elections in California and Los Angeles.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c7v9vz1gd76o?at_medium=RSS&at_campaign=rss" target="_blank">US plans to fight flesh-eating screwworm outbreak with flies and dogs</a><br>
-			  <small>The insect, which has been found in America for the first time since 1966, is a growing concern in the southern US.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cp8p8e1gnx7o?at_medium=RSS&at_campaign=rss" target="_blank">Dutch police investigate suspected drugging and sexual assault of multiple women</a><br>
-			  <small>Police raided the suspects' homes after tip-offs from German and UK authorities.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c4g0nnj51jyo?at_medium=RSS&at_campaign=rss" target="_blank">Oscar-nominated Persepolis author Marjane Satrapi dies aged 56</a><br>
-			  <small>The French-Iranian author and illustrator was known for her graphic novel series and Oscar-nominated film.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cvgzgd2xe2zo?at_medium=RSS&at_campaign=rss" target="_blank">Marilyn Monroe auction features star's make-up and gowns on 100th birthday</a><br>
-			  <small>The auction has already brought in thousands in bids and includes intimate items from her life.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cg5prr9gr1ro?at_medium=RSS&at_campaign=rss" target="_blank">Israeli strikes kill 11 people in Gaza City, medics say</a><br>
-			  <small>Women and children were among those killed in the attacks on four residential buildings, which Israel's military says killed four Hamas security officials.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c3r2rdjv2n1o?at_medium=RSS&at_campaign=rss" target="_blank">Kushner-backed luxury resort plan sparks protests in Albania</a><br>
-			  <small>Demonstrators say the project backed by Donald Trump's son-in-law would harm a protected environment.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c2e2e71xyjzo?at_medium=RSS&at_campaign=rss" target="_blank">John Bolton expected to plead guilty in classified documents case, sources confirm</a><br>
-			  <small>Trump's former advisor turned critic had reached a deal with prosecutors, two people said.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cwy255wzdqro?at_medium=RSS&at_campaign=rss" target="_blank">Charges dropped against Budapest mayor over 2025 Pride march</a><br>
-			  <small>Budapest's liberal Mayor Gergely Karacsony had been charged with helping to organise the banned 2025 march.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/sport/mixed-martial-arts/articles/cx21778x81zo?at_medium=RSS&at_campaign=rss" target="_blank">Trump says Eiffel Tower-like UFC structure may stay</a><br>
-			  <small>President Donald Trump says he may choose to leave a purpose-built UFC arena standing at the White House because it is "attractive to a lot of people".</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cpdpwgxl1qzo?at_medium=RSS&at_campaign=rss" target="_blank">Heavy gunfire in Somali capital as row over election delay escalates</a><br>
-			  <small>The opposition has called for protests after the president's term in office was extended by a year.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/c0r2klj0nyxo?at_medium=RSS&at_campaign=rss" target="_blank">Ukraine accused of killing four in occupied Crimea</a><br>
-			  <small>At least 10 people have been injured in the attacks, according to Russian-backed officials.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cvgz2yjl4y3o?at_medium=RSS&at_campaign=rss" target="_blank">Missing Sherpa guide found on Mount Everest after 'miracle' self-rescue</a><br>
-			  <small>Cleaners found Dawa Sherpa crawling towards Base Camp six days after he went missing at a higher altitude.</small>
-			</li>
-			
-			<li>
-			  <a href="https://www.bbc.com/news/articles/cd7p11010g5o?at_medium=RSS&at_campaign=rss" target="_blank">Bondi Beach shooting hero charged with assault</a><br>
-			  <small>Ahmed al Ahmed disarmed one of the alleged shooters during the deadly attack at a Jewish event.</small>
-			</li>
-			
-    </ul>
+<script>
+// 栏目数据
+const sourceKeys = ["bbc","cnn"];
+// tab切换
+const btns = document.querySelectorAll('.nav-wrap button');
+const lists = document.querySelectorAll('.news-wrap');
+btns.forEach(btn=>{
+    btn.onclick = ()=>{
+        const k = btn.dataset.key;
+        // 按钮选中
+        btns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        // 内容切换
+        lists.forEach(box=>{
+            box.classList.toggle('show', box.dataset.key === k)
+        })
+    }
+})
+</script>
 </body>
 </html>

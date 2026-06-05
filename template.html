@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球新闻聚合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 14px;
+            background: #f7f8fa;
+        }
+        /* iOS导航样式 */
+        nav {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            padding:6px;
+            margin-bottom:20px;
+        }
+        .nav-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap:4px;
+        }
+        .nav-wrap button {
+            padding:9px 18px;
+            border-radius:10px;
+            font-size:15px;
+            color:#333;
+            background:transparent;
+            border:none;
+            cursor:pointer;
+        }
+        .nav-wrap button.active {
+            background:#007aff;
+            color:#fff;
+        }
+        .nav-wrap button:not(.active):hover {
+            background:#eee;
+        }
+        .news-wrap{
+            display:none;
+        }
+        .news-wrap.show{
+            display:block;
+        }
+        ul {
+            list-style: none;
+            background:#fff;
+            border-radius:14px;
+            overflow:hidden;
+            box-shadow:0 1px 6px rgba(0,0,0,0.05);
+        }
+        li {
+            padding:16px;
+            border-bottom:1px solid #f2f2f2;
+        }
+        li:last-child{
+            border-bottom:none;
+        }
+        li a {
+            font-size:17px;
+            color:#111;
+            text-decoration:none;
+        }
+        small {
+            display:block;
+            margin-top:8px;
+            font-size:14px;
+            color:#777;
+            line-height:1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航按钮占位 -->
+    <nav>
+        <div class="nav-wrap">
+            {{NAV_BTN}}
+        </div>
+    </nav>
+    <!-- 全部新闻容器占位 -->
+    {{ALL_NEWS}}
+
+<script>
+// 栏目数据
+const sourceKeys = {{KEY_LIST}};
+// tab切换
+const btns = document.querySelectorAll('.nav-wrap button');
+const lists = document.querySelectorAll('.news-wrap');
+btns.forEach(btn=>{
+    btn.onclick = ()=>{
+        const k = btn.dataset.key;
+        // 按钮选中
+        btns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        // 内容切换
+        lists.forEach(box=>{
+            box.classList.toggle('show', box.dataset.key === k)
+        })
+    }
+})
+</script>
+</body>
+</html>

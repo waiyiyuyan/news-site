@@ -1,0 +1,12 @@
+[
+  {
+    "name": "BBC 新闻",
+    "key": "bbc",
+    "rssUrl": "https://feeds.bbci.co.uk/news/world/rss.xml"
+  },
+  {
+    "name": "CNN 新闻",
+    "key": "cnn",
+    "rssUrl": "http://rss.cnn.com/rss/edition.rss"
+  }
+]
