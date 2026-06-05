@@ -1,8 +1,25 @@
 [
   {
-    "name": "Google News",
+    "name": "谷歌新闻",
     "key": "google",
     "rssUrl": "https://news.google.com/rss"
-  }
+  },
   
+  {
+    "name": "德国之声",
+    "key": "rdf",
+    "rssUrl": "https://rss.dw.com/rdf/rss-en-world"
+  },
+  
+  {
+    "name": "今日俄罗斯",
+    "key": "rt",
+    "rssUrl": "https://www.rt.com/rss/news/"
+  },
+  
+  {
+    "name": "南华早报",
+    "key": "scmp",
+    "rssUrl": "https://www.scmp.com/rss/3/feed/"
+  }
 ]
