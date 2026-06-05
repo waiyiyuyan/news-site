@@ -90,6 +90,18 @@
             color:#657786;
             line-height:1.5;
         }
+        /* 关键：限制small内部标签，解决内容自动换行拆分新闻条目 */
+        small p {
+            margin: 2px 0 !important;
+        }
+        small br {
+            display: none !important;
+        }
+        small img {
+            max-width: 90px !important;
+            height: auto;
+            display: none;
+        }
     </style>
 </head>
 <body>
