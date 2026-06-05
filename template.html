@@ -27,19 +27,26 @@
             margin-bottom:20px;
         }
         .nav-wrap {
-            display: flex;
-            flex-wrap: wrap;
-            gap:4px;
-        }
+			display: flex;
+			/* 删掉 flex-wrap: wrap; 禁止换行 */
+			gap:4px;
+			overflow-x: auto;
+			padding:4px 2px;
+			/* 隐藏滚动条（苹果手机无痕） */
+			-webkit-overflow-scrolling: touch;
+			scrollbar-width: none;
+		}
         .nav-wrap button {
-            padding:9px 18px;
-            border-radius:10px;
-            font-size:15px;
-            color:#333;
-            background:transparent;
-            border:none;
-            cursor:pointer;
-        }
+			padding:9px 18px;
+			border-radius:10px;
+			font-size:15px;
+			color:#333;
+			background:transparent;
+			border:none;
+			cursor:pointer;
+			/* 按钮不压缩，固定自身宽度 */
+			flex-shrink: 0;
+		}
         .nav-wrap button.active {
             background:#007aff;
             color:#fff;
